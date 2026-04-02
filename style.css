@@ -215,8 +215,9 @@ a {
     z-index: 2;
     text-align: center;
     max-width: 800px;
-    margin: 0 auto; /* This is the magic line that centers the block */
-    padding: 0 15px; /* Adds a safety buffer so text doesn't touch the screen edges on mobile */
+    width: 100%;       /* Tells the box to take up space so it can be centered */
+    padding: 0 20px;   /* Buffer for mobile */
+    /* Remove any 'left' or 'right' properties if you had them! */
 }
 
 .hero-content h1 {
