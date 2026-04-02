@@ -24,7 +24,7 @@
 /* Reset & Typography */
 * {
     margin: 0;
-    padding: 0;
+    padding: 50px;
     box-sizing: border-box;
 }
 
