@@ -1,74 +1,76 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // --- 1. Sticky Header Background Change on Scroll ---
-    const header = document.getElementById('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
+    // --- 1. Theme Toggle (Dark/Light Mode) ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
 
-    // --- 2. Dark/Light Theme Toggle ---
-    const themeBtn = document.getElementById('theme-toggle');
-    const htmlEl = document.documentElement;
-    
-    // Check local storage
-    const currentTheme = localStorage.getItem('galaxy-studio-theme');
-    if (currentTheme) {
-        htmlEl.setAttribute('data-theme', currentTheme);
+    // Check local storage for user preference
+    const savedTheme = localStorage.getItem('galaxy-theme');
+    if (savedTheme) {
+        htmlElement.setAttribute('data-theme', savedTheme);
     }
 
-    themeBtn.addEventListener('click', () => {
-        const theme = htmlEl.getAttribute('data-theme');
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        htmlEl.setAttribute('data-theme', newTheme);
-        localStorage.setItem('galaxy-studio-theme', newTheme);
+    themeToggleBtn.addEventListener('click', () => {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('galaxy-theme', newTheme);
     });
 
-    // --- 3. Smooth Scrolling for Nav Links ---
-    document.querySelectorAll('.main-nav a, .btn[href^="#"], .btn-text').forEach(link => {
-        link.addEventListener('click', function(e) {
+    // --- 2. Smooth Scrolling for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if(targetId === '#') return;
-
+            
             const targetElement = document.querySelector(targetId);
             if(targetElement) {
-                // Adjust for sticky header height
-                const headerHeight = header.offsetHeight;
-                const elementTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                
+                // Account for sticky header offset
+                const headerOffset = document.querySelector('.site-header').offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                 window.scrollTo({
-                    top: elementTop - headerHeight,
-                    behavior: 'smooth'
+                    top: offsetPosition,
+                    behavior: "smooth"
                 });
             }
         });
     });
 
-    // --- 4. Booking Form Simulation ---
-    const bookingForm = document.getElementById('bookingForm');
+    // --- 3. Form Submission Handler (Mock logic) ---
+    const bookingForm = document.getElementById('booking-form');
     if(bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const submitBtn = bookingForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerText;
+            const btn = bookingForm.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
             
-            submitBtn.innerText = "Transmitting Request...";
-            submitBtn.disabled = true;
-            submitBtn.style.opacity = "0.7";
+            // Visual feedback for conversion
+            btn.innerText = "Transmitting...";
+            btn.style.backgroundColor = "#45a29e";
+            btn.disabled = true;
 
-            // Simulate API interaction
+            // Simulate API call delay
             setTimeout(() => {
-                alert("Session Request Received. A Galaxy studio manager will contact you shortly to confirm the dates.");
+                alert("Transmission successful! The Galaxy Recording Co. team will contact you shortly.");
                 bookingForm.reset();
-                submitBtn.innerText = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.opacity = "1";
+                btn.innerText = originalText;
+                btn.style.backgroundColor = "";
+                btn.disabled = false;
             }, 1500);
         });
     }
+
+    // --- 4. Exit Intent Popup Logic (Optional hook) ---
+    let exitIntentTriggered = false;
+    document.addEventListener('mouseleave', (e) => {
+        if (e.clientY < 0 && !exitIntentTriggered) {
+            exitIntentTriggered = true;
+            // You can initialize a modal here for "Free Consultation Offer"
+            console.log("Exit intent triggered. Display modal here.");
+        }
+    });
 });
