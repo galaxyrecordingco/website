@@ -3,206 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galaxy Recording Co. | Industry-Standard Music Production</title>
-    <meta name="description" content="Galaxy Recording Co. offers top-tier tracking, mixing, and mastering services in state-of-the-art acoustic spaces. Book your session today.">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Galaxy Recording Co. | Professional Music Production & Mastering</title>
+    <meta name="description" content="Galaxy Recording Co. offers top-tier recording, mixing, and mastering services. Founded in 2025, we bring your sound to the universe. Book your session today.">
+    <meta name="keywords" content="recording studio, mixing and mastering, professional music production, artist development">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="site-header" id="header">
-        <div class="container nav-container">
-            <a href="#hero" class="logo">
-                <span class="neon-text">GALAXY</span> RECORDING
-            </a>
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="neon-text">GALAXY</span> RECORDING CO.
+                <span class="est">Since 2025</span>
+            </div>
             <nav class="main-nav">
-                <a href="#studios">The Studios</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#services">Services</a>
-                <a href="#gear">Equipment</a>
-                <a href="#portfolio">Credits</a>
-                <a href="#booking">Book Session</a>
+                <a href="#portfolio">Works</a>
+                <a href="#contact">Contact</a>
             </nav>
             <div class="nav-actions">
-                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">🌗</button>
+                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌓</button>
+                <a href="#contact" class="btn btn-primary">Book Now</a>
             </div>
         </div>
     </header>
 
-    <section id="hero" class="hero-section">
-        <div class="space-overlay"></div>
-        <div class="container hero-content">
-            <h1>Your Sound, <br><span class="neon-text">Our Universe.</span></h1>
-            <p class="subtitle">Atlanta-inspired workflow. Cosmic-level quality. <br>The premier destination for tracking, SSL mixing, and mastering.</p>
-            <div class="button-group">
-                <a href="#booking" class="btn btn-primary">Book Studio Time</a>
-                <a href="#studios" class="btn btn-outline">Explore Rooms</a>
+    <section id="home" class="hero-section">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="hero-video">
+            </video>
+        
+        <div class="hero-content">
+            <h1>Your Sound,<br><span class="neon-text">Our Universe.</span></h1>
+            <p>Elevating artists with world-class recording, mixing, and mastering.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn btn-primary btn-large">Book Your Session Today</a>
+                <a href="#portfolio" class="btn btn-secondary btn-large">Listen to Portfolio</a>
+            </div>
+            <div class="trust-badges">
+                <span>✔️ Professional Engineers</span>
+                <span>✔️ State-of-the-art Gear</span>
+                <span>✔️ Hundreds of Projects Completed</span>
             </div>
         </div>
     </section>
 
-    <section id="studios" class="section">
+    <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title">Our <span class="neon-text">Spaces</span></h2>
-            <p class="section-desc">Acoustically perfected environments designed for ultimate sonic clarity.</p>
-            
-            <div class="grid studio-grid">
-                <div class="card studio-card">
-                    <div class="card-image placeholder-img">Nova Room Photo</div>
-                    <div class="card-body">
-                        <h3>Studio A: "The Nova Room"</h3>
-                        <p class="highlight">Main Tracking & SSL Mixing</p>
-                        <p>Our flagship room featuring a 72-channel analog console, expansive live room for full bands, and PMC main monitors. Ideal for major label mixing and large-scale tracking.</p>
-                        <a href="#booking" class="btn-text">Book Studio A &rarr;</a>
-                    </div>
-                </div>
-                <div class="card studio-card">
-                    <div class="card-image placeholder-img">Pulsar Suite Photo</div>
-                    <div class="card-body">
-                        <h3>Studio B: "The Pulsar Suite"</h3>
-                        <p class="highlight">Vocal Tracking & Production</p>
-                        <p>An intimate, highly controlled vocal and beatmaking suite. Equipped with an extensive vintage mic locker, Neve preamps, and a vocal booth with zero reflections.</p>
-                        <a href="#booking" class="btn-text">Book Studio B &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title">Core <span class="neon-text">Services</span></h2>
+            <h2 class="section-title">Our Services</h2>
             <div class="grid services-grid">
-                <div class="service-item">
-                    <div class="icon">🎙️</div>
-                    <h3>Tracking</h3>
-                    <p>Pristine audio capture using world-class microphones and outboard analog gear.</p>
+                <div class="card service-card">
+                    <h3>Recording</h3>
+                    <p>Crystal clear multi-track recording in our acoustically treated live rooms.</p>
+                    <a href="#contact" class="text-link">Book Now &rarr;</a>
                 </div>
-                <div class="service-item">
-                    <div class="icon">🎛️</div>
+                <div class="card service-card">
                     <h3>Mixing</h3>
-                    <p>Analog summing and digital precision to give your tracks industry-standard width and punch.</p>
+                    <p>Balancing and enhancing your tracks for width, depth, and punch.</p>
+                    <a href="#contact" class="text-link">Book Now &rarr;</a>
                 </div>
-                <div class="service-item">
-                    <div class="icon">💽</div>
+                <div class="card service-card">
                     <h3>Mastering</h3>
-                    <p>The final cosmic polish. Loud, dynamic, and optimized for all streaming platforms.</p>
+                    <p>The final polish to ensure your tracks translate perfectly on all streaming platforms.</p>
+                    <a href="#contact" class="text-link">Book Now &rarr;</a>
                 </div>
-                <div class="service-item">
-                    <div class="icon">🎹</div>
+                <div class="card service-card">
                     <h3>Production</h3>
-                    <p>Beat production, vocal tuning (Melodyne/Auto-Tune), and custom arrangements.</p>
+                    <p>Beatmaking, vocal tuning, and full-scale arrangements to bring your vision to life.</p>
+                    <a href="#contact" class="text-link">Book Now &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="gear" class="section">
+    <section id="portfolio" class="section dark-bg">
         <div class="container">
-            <h2 class="section-title">The <span class="neon-text">Armory</span></h2>
-            <p class="section-desc">We don't compromise on gear. A glimpse of our outboard and mic locker.</p>
-            
-            <div class="gear-columns">
-                <div class="gear-list">
-                    <h3>Consoles & Monitoring</h3>
-                    <ul>
-                        <li>SSL 4000 G+ Console (Custom Modified)</li>
-                        <li>ATC SCM45A Pro Monitors</li>
-                        <li>Yamaha NS-10M Studio</li>
-                        <li>Dangerous Music Monitor ST</li>
-                    </ul>
+            <h2 class="section-title">Featured Works</h2>
+            <div class="grid portfolio-grid">
+                <div class="card portfolio-card">
+                    <div class="portfolio-image placeholder-img">Project Alpha Cover</div>
+                    <div class="portfolio-content">
+                        <h3>Project Alpha</h3>
+                        <p class="client-name">Client: The Supernovas</p>
+                        <p>Full Album Production & Mixing.</p>
+                        <audio controls class="audio-player">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
                 </div>
-                <div class="gear-list">
-                    <h3>Outboard Processing</h3>
-                    <ul>
-                        <li>Neve 1073 Mic Preamps (x8)</li>
-                        <li>Tube-Tech CL 1B Compressor</li>
-                        <li>Universal Audio 1176LN</li>
-                        <li>Pultec EQP-1A Equalizers</li>
-                    </ul>
-                </div>
-                <div class="gear-list">
-                    <h3>Microphones</h3>
-                    <ul>
-                        <li>Sony C-800G (The Hip-Hop Standard)</li>
-                        <li>Neumann U87 Ai</li>
-                        <li>Telefunken ELA M 251E</li>
-                        <li>Royer R-121 Ribbon</li>
-                    </ul>
+                <div class="card portfolio-card">
+                    <div class="portfolio-image placeholder-img">Nebula EP Cover</div>
+                    <div class="portfolio-content">
+                        <h3>Nebula EP</h3>
+                        <p class="client-name">Client: Sarah Jenkins</p>
+                        <p>Vocal Recording & Mastering.</p>
+                        <audio controls class="audio-player">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="section bg-alt">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">Recent <span class="neon-text">Transmissions</span></h2>
-            <p class="section-desc">Listen to the latest projects tracked and mixed at Galaxy.</p>
-            
-            <div class="grid credit-grid">
-                <div class="credit-card">
-                    <h4>"Supernova" - Orion's Belt</h4>
-                    <p class="credit-role">Mixed & Mastered</p>
-                    <audio controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
+            <h2 class="section-title">About the Studio</h2>
+            <div class="about-content">
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>Founded in 2025, Galaxy Recording Co. was built on an artist-first philosophy. We combine industry-leading analog gear with cutting-edge digital workflows to create a zero-compromise sonic environment. Whether you're recording your first demo or mastering your third studio album, we treat every project with cosmic importance.</p>
                 </div>
-                <div class="credit-card">
-                    <h4>"Dark Matter Pt. 2" - LUNA</h4>
-                    <p class="credit-role">Vocal Tracking & Production</p>
-                    <audio controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="credit-card">
-                    <h4>"Event Horizon" - The Quasars</h4>
-                    <p class="credit-role">Full Band Tracking</p>
-                    <audio controls>
-                        <source src="#" type="audio/mpeg">
-                    </audio>
+                <div class="team-grid grid">
+                    <div class="team-member">
+                        <div class="team-photo placeholder-img">Photo</div>
+                        <h4>Alex Vance</h4>
+                        <p>Lead Audio Engineer</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-photo placeholder-img">Photo</div>
+                        <h4>Mia Torres</h4>
+                        <p>Senior Producer</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="booking" class="section">
-        <div class="container booking-container">
-            <div class="booking-info">
-                <h2 class="section-title" style="text-align: left;">Initiate <span class="neon-text">Session</span></h2>
-                <p>Fill out the manifest to request studio time. Our studio manager will confirm rates, availability, and session details within 12 hours.</p>
-                <div class="contact-details">
-                    <p><strong>Location:</strong> 100 Stellar Way, Studio District</p>
-                    <p><strong>Phone:</strong> +1 (800) GLXY-REC</p>
-                    <p><strong>Email:</strong> booking@galaxyrecording.co</p>
-                </div>
-                <div class="trust-badges">
-                    <span>🔒 Secure Deposit System</span>
-                    <span>🕒 24/7 Session Availability</span>
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Initiate Contact</h2>
+            <div class="contact-wrapper">
+                <form id="booking-form" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Name / Artist Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="project-type">Project Type</label>
+                        <select id="project-type">
+                            <option value="recording">Recording Session</option>
+                            <option value="mixing">Mixing</option>
+                            <option value="mastering">Mastering</option>
+                            <option value="production">Full Production</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details & Preferred Dates</label>
+                        <textarea id="message" rows="5" required placeholder="Tell us about your sound..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send Transmission (Book Session)</button>
+                    <p class="microcopy">We aim to respond to all inquiries within 24 hours.</p>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Studio Coordinates</h3>
+                    <p>📧 galaxyrecordingco@gmail.com</p>
+                    <p>📞 +1 (570) 980-4168</p>
+                    <div class="map-placeholder placeholder-img">
+                        Google Maps Embed Placeholder
+                    </div>
                 </div>
             </div>
-            
-            <form id="bookingForm" class="booking-form">
-                <div class="form-row">
-                    <input type="text" placeholder="Artist / Band Name" required>
-                    <input type="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-row">
-                    <input type="tel" placeholder="Phone Number" required>
-                    <select required>
-                        <option value="" disabled selected>Select Room / Service</option>
-                        <option value="studio-a">Studio A (Tracking/Mixing)</option>
-                        <option value="studio-b">Studio B (Vocals/Production)</option>
-                        <option value="mastering">Mastering Only (Remote)</option>
-                    </select>
-                </div>
-                <textarea rows="5" placeholder="Project details, requested dates, and specific gear needs..." required></textarea>
-                <button type="submit" class="btn btn-primary btn-block">Submit Session Request</button>
-            </form>
         </div>
     </section>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2025 Galaxy Recording Co. All rights reserved. | <a href="#">Privacy Policy</a></p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Galaxy Recording Co.</h3>
+                <p>Your Sound, Our Universe.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacy Policy (GDPR)</a>
+                <a href="#blog">Resources</a>
+            </div>
+            <div class="social-links">
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Galaxy Recording Co. All rights reserved.</p>
         </div>
     </footer>
 
